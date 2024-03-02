@@ -1,4 +1,4 @@
-public class lista_3 {
+public class java_lista_3 {
     // ZADANIE 1
 
 
