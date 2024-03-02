@@ -1,6 +1,8 @@
 import java.util.Arrays;
+
 public class lista_2 {
-    public static int missingNumber (int[] tab) {
+    // ZADANIE 1
+     static int missingNumber (int[] tab) {
         Arrays.sort(tab);
         int x=-1;
         int roznica = tab[tab.length-1] - tab.length;
@@ -14,11 +16,11 @@ public class lista_2 {
         // SPRAWDZANIE CZY WYSTEPUJE ELEMENT UJEMNY BADZ ELEMENTY POWTARZAJA SIE
         for (int i = 0; i < tab.length; i++) {
             if (tab[i] < 0) {
-                System.out.println("Element ujemny");
+                System.out.println("element ujemny");
                 return -2;
             }
             if (tab[i] == x) {
-                System.out.println("Element powtarza sie");
+                System.out.println("element powtarza sie");
                 return -3;
             }
             x=tab[i];
@@ -32,32 +34,44 @@ public class lista_2 {
         return 99;
     }
 
+    // ZADANIE 2
     public static String  isPalindrome (String word) {
         for (int i = 0; i < word.length()/2; i++) {
-            if ( word.charAt(i) != word.charAt(word.length()-1-i) )  return "NO";
+            if ( word.charAt(i) != word.charAt(word.length()-1-i) )  return "false";
         }
-        return "YES";
+        return "true";
     }
 
-    public static String printPascal (int height) {
-        System.out.println("1");
-        return "";
+    // ZADANIE 3
+    public static void printPascal (int height) {
+        for (int i = 0; i < height; i++) {
+            for (int space = 0; space < height - i - 1; space++) {
+                System.out.print(" ");
+            }
+
+            int x = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.print(x + " ");
+                x = x * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) {
         // ZADANIE 1
         System.out.println("ZADANIE 1");
-        int[] tab = new int[]{1, 4, 5, 3, 0, 6}; // N = 6
+        int[] tab = new int[]{2, 4, 5, 3, 0, 6};
         System.out.println(missingNumber(tab));
 
         // ZADANIE 2
         System.out.println("\nZADANIE 2");
-        String word  = "aabba";
+        String word  = "abba";
         System.out.println(isPalindrome(word));
 
         // ZADANIE 3
         System.out.println("\nZADANIE 3");
-        int height =3;
-        System.out.println(printPascal(height));
+        int height = 4;
+        printPascal(height);
     }
 }
