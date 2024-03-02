@@ -1,4 +1,4 @@
-class java_lista_1 {
+class lista_1 {
      static String  function_zad4(int x) {
         String sum_string="";
         if (x%3==0)     sum_string+="trzy";

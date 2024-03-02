@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class java_lista_2 {
+public class lista_2 {
     // ZADANIE 1
      static int missingNumber (int[] tab) {
         Arrays.sort(tab);
