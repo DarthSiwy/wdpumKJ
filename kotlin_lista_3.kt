@@ -17,7 +17,7 @@ fun numberOfOccurrences(input: String): Map<String, Int> {
 }
 
 fun main() {
-    val input: String = "To jest przykładowe zdanie. To zdanie jest tylko przykładowee."
+    val input: String = "To jest przykładowe zdanie. To zdanie jest tylko przykładoweee."
     val result = numberOfOccurrences(input)
 
     for ((word, count) in result) {
