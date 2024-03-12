@@ -25,7 +25,6 @@ fun addToBoolean(): Map<Int, Boolean> {
     return result_map
 }
 
-
 fun main() {
     println("Zadanie 1");
     val input: String = "To jest przykladowe zdanie. To zdanie jest tylko przykladowe."
@@ -37,5 +36,4 @@ fun main() {
 
     println("\nZadanie 3");
     println(addToBoolean())
-
 }
