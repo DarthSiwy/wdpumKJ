@@ -15,19 +15,21 @@ fun countElements(input: List<List<String>>): Map<String, Int> {
 
 fun evenPositiveSquare(numbers_list: List<Int>): List<Int> {
     return numbers_list.withIndex()
-        .filter { (index, number) -> index % 2 != 0 }
-        .filter { (index, number) ->  number > 0}
+        .filter { (index, _) -> index % 2 != 0 }
+        .filter { (_, number) ->  number > 0}
         .map    { (_,   number) -> number * number}
 }
 
 fun srt(input: List<String>): List<Pair<Char, List<String>>> {
-    return input.groupBy { it.first().toLowerCase() }
+    return input.groupBy { it.first().lowercaseChar() }
         .toList()
         .sortedBy { it.first }
         .map { Pair(it.first, it.second.sorted().filter{ it.length % 2 == 0 }) }
 }
 
 fun main() {
+
+    //ListOf results_values
     val result_1 = lambda("Ala",4)
     val result_2 = suma(listOf(1, -4, 12, 0, -3, 29, -150))
     val result_3 = countElements(listOf( listOf("a", "b", "c"), listOf("c", "d", "f"), listOf("d", "f", "g")))
